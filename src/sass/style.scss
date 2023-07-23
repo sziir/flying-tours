@@ -1,0 +1,86 @@
+@import "./vars";
+@import "./mixins";
+
+body {
+  background-color: $bg;
+  color: $font;
+  height: 3000px;
+  nav {
+    background-color: $bg-light;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    a.navbar-brand {
+      max-width: 10%;
+      background-color: antiquewhite;
+      border-radius: 5px;
+      img {
+        max-width: 30%;
+      }
+    }
+    ul.navbar-nav {
+      margin-right: 15%;
+      li.nav-item {
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 5px;
+        &:not(:last-child) {
+          margin-left: 50px;
+        }
+        a.nav-link {
+          @include btn-outLing($font);
+        }
+      }
+    }
+  }
+  #about-company {
+    background-color: $bg-light;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 70%;
+    margin-bottom: 80px;
+    .heading {
+      margin-bottom: 50px;
+      color: $font-dark;
+      h2 {
+        text-align: center;
+      }
+      hr {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+  #our-services {
+    margin-bottom: 80px;
+    h1 {
+       text-align: center; 
+    }
+    hr {
+        margin-bottom: 40px;
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .card {
+      height: 530px;
+      margin-bottom: 30px;
+      background-color: $bg-light;
+      img {
+        max-width: 100%;
+        height: 400px;
+      }
+      .card-body {
+        p {
+          font-size: 17px;
+          color: $font;
+          text-align: center;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
