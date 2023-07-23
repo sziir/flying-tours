@@ -195,7 +195,7 @@ body {
         border-radius: 10px;
         max-width: 100%;
         margin-bottom: 100px;
-
+        height: 300px;
         @media (max-width: 575.98px) {
           max-width: 100%;
           padding: 50px 3px;
@@ -214,6 +214,7 @@ body {
         p {
           font-size: 13px;
           text-align: center;
+          
           @media (max-width: 575.98px) {
             font-size: 17px;
             width: 100%;
@@ -222,6 +223,22 @@ body {
             font-size: 17px;
           }
         }
+        .heading-p {
+            font-size: 17px;
+        }
+      }
+    }
+  }
+  #carouselTour {
+    .carousel-inner {
+      img {
+        max-width: 100%;
+        width: 1000px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        margin-bottom: 50px;
       }
     }
   }
