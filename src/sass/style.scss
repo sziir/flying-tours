@@ -8,6 +8,7 @@ body {
     background-color: $bg-light;
     border-radius: 5px;
     margin-bottom: 80px;
+    padding: 15px !important;
     a.navbar-brand {
       max-width: 10%;
       background-color: antiquewhite;
@@ -24,6 +25,9 @@ body {
     }
     ul.navbar-nav {
       margin-right: 15%;
+      @media (max-width: 1199.98px) {
+        margin-right: 6%;
+      }
       @media (max-width: 991.98px) {
         margin-top: 20px;
         margin-right: 0%;
@@ -90,7 +94,7 @@ body {
       margin-left: auto;
     }
     .card {
-      height: 530px;
+      height: 540px;
       margin-bottom: 30px;
       background-color: $bg-light;
       @media (max-width: 1199.98px) {
@@ -288,4 +292,53 @@ body {
       }
     }
   }
+  #login {
+    margin-top: 200px;
+    max-width: 500px;
+    background-color: $bg-light;
+    padding: 50px;
+    border-radius: 10px;
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    button {
+        @include btn-outLing($font);
+        padding: 5px;
+        margin-bottom: 10px;
+        @media (max-width: 349.98px) {
+        }
+    }
+    a {
+        color: $font;
+        &:hover {
+            color: $font-dark;
+        }
+        margin-top: 10px;
+    }
+  }
+  #register {
+    margin-top: 200px;
+    background-color: $bg-light;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  h1 {
+    text-align: center;
+  }
+  label {
+    margin-bottom: 15px !important;
+    margin-top: 30px;
+}
+    .clearfix {
+        margin-top: 50px;
+    }
+    button {
+        @include btn-outLing($font);
+        margin-bottom: 30px;
+    }
+    a {
+        color: $font;
+        
+    }
 }

@@ -91,6 +91,14 @@ module.exports = {
             filename: 'eygpt.html',
             template: './src/eygpt.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: './src/login.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'register.html',
+            template: './src/register.html'
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/style.css',
 
