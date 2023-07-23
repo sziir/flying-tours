@@ -84,8 +84,12 @@ module.exports = {
             template: './src/index.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'turki.html',
-            template: './src/turki.html'
+            filename: 'turkey.html',
+            template: './src/turkey.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'eygpt.html',
+            template: './src/eygpt.html'
         }),
         new MiniCssExtractPlugin({
             filename: 'css/style.css',

@@ -186,9 +186,12 @@ body {
     }
   }
   //////// turki tour page //////////
-  #turki-tour {
+  #turkey-tour {
     margin-top: 200px;
     .header {
+        .first-heading {
+            height: auto !important;
+        }
       .heading {
         background-color: $bg-light;
         padding: 50px;
@@ -214,7 +217,7 @@ body {
         p {
           font-size: 13px;
           text-align: center;
-          
+
           @media (max-width: 575.98px) {
             font-size: 17px;
             width: 100%;
@@ -224,12 +227,55 @@ body {
           }
         }
         .heading-p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  #eygpt-tour {
+    margin-top: 200px;
+    .header {
+      .heading {
+        background-color: $bg-light;
+        padding: 50px;
+        border-radius: 10px;
+        max-width: 100%;
+        margin-bottom: 100px;
+        height: auto;
+        @media (max-width: 575.98px) {
+          max-width: 100%;
+          padding: 50px 3px;
+        }
+        h2 {
+          text-align: center;
+          color: $font-dark;
+          font-size: 25px;
+        }
+        hr {
+          max-width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        p {
+          font-size: 13px;
+          text-align: center;
+
+          @media (max-width: 575.98px) {
             font-size: 17px;
+            width: 100%;
+          }
+          @media (max-width: 767.98px) {
+            font-size: 17px;
+          }
+        }
+        .heading-p {
+          font-size: 17px;
         }
       }
     }
   }
   #carouselTour {
+    margin-top: 40px;
     .carousel-inner {
       img {
         max-width: 100%;
