@@ -57,13 +57,13 @@ body {
   #our-services {
     margin-bottom: 80px;
     h1 {
-       text-align: center; 
+      text-align: center;
     }
     hr {
-        margin-bottom: 40px;
-        width: 50%;
-        margin-right: auto;
-        margin-left: auto;
+      margin-bottom: 40px;
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
     }
     .card {
       height: 530px;
@@ -79,6 +79,38 @@ body {
           color: $font;
           text-align: center;
           padding-top: 10px;
+        }
+      }
+    }
+  }
+  #tours {
+    .heading {
+      text-align: center;
+    }
+    hr {
+      margin-bottom: 40px;
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .card {
+      background-color: $bg-light;
+      box-shadow: 0 0 10px #eef0ea;
+      .card-body {
+        color: $font;
+        h3 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+        p {
+            color: lightgreen;
+            font-size: 22px
+        }
+        a.btn {
+           @include btn-outLing($font);
+           margin-top: 20px;
+           margin-left: auto;
+           margin-right: auto;
         }
       }
     }
