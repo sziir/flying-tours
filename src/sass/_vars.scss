@@ -1,7 +1,17 @@
 $bg: #212529;
-$bg-light: #555555;
+$bg-light: #353535;
+$bg-dark: #090a0f;
 
 $font: antiquewhite;
 $font-dark: darken($font, 20%);
+$font-ex-dark: darken($font, 30%);
 
+$font-turkey: #00ffff;
+$font-turkey-dark: #00aeff;
+$font-turkey-ex-dark: darken($font-turkey-dark, 10%);
+
+$font-eygpt: antiquewhite;
+$font-eygpt-dark: darken($font-eygpt, 20%);
+$font-eygpt-ex-dark: darken($font-eygpt-dark, 10%);
 $bg-btn-outline: antiquewhite;
+
