@@ -1,3 +1,4 @@
+/// button style
 @mixin btn-outLing($btn-color) {
   color: $btn-color;
   border-color: $btn-color;
@@ -14,9 +15,13 @@
     background-color: transparent;
   }
 }
+/////// tour page colors edit
 @mixin tour($color-bg, $color-ex-dark, $color-dark, $color) {
   nav {
     border-color: $color;
+    button {
+        background-color: $color !important;
+    }
     a.navbar-brand {
       background-color: $color;
       box-shadow: 0 0 10px $color;
@@ -63,13 +68,6 @@
     }
     button {
       color: $color-ex-dark;
-    }
-  }
-}
-
-.description {
-  .heading {
-    p {
     }
   }
 }

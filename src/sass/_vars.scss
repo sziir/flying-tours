@@ -2,6 +2,8 @@ $bg: #212529;
 $bg-light: #353535;
 $bg-dark: #090a0f;
 
+$bg-btn-outline: antiquewhite;
+
 $font: antiquewhite;
 $font-dark: darken($font, 20%);
 $font-ex-dark: darken($font, 30%);
@@ -15,5 +17,4 @@ $font-eygpt: darken($font, 20%);
 $font-eygpt-dark: darken($font-eygpt, 10%);
 $font-eygpt-ex-dark: darken($font-eygpt-dark, 10%);
 
-$bg-btn-outline: antiquewhite;
 

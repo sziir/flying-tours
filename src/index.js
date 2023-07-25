@@ -157,4 +157,6 @@ particlesJS("bg", {
     }
     requestAnimationFrame(update);
   };
-  requestAnimationFrame(update);
+requestAnimationFrame(update);
+  
+
