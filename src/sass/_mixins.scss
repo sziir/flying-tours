@@ -24,17 +24,17 @@
     }
     a.navbar-brand {
       background-color: $color;
-      box-shadow: 0 0 10px $color;
+      box-shadow: 0 0 10px $color-dark;
       &:hover {
         background-color: $color-ex-dark;
       }
       &::before {
-        border-top: 4px solid $color;
-        border-right: 4px solid $color;
+        border-top: 4px solid $color-dark;
+        border-right: 4px solid $color-dark;
       }
       &::after {
-        border-bottom: 4px solid $color;
-        border-left: 4px solid $color;
+        border-bottom: 4px solid $color-dark;
+        border-left: 4px solid $color-dark;
       }
     }
     a.nav-link {
