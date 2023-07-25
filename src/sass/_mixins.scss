@@ -1,16 +1,75 @@
-@mixin btn-outLing($color) {
-    color: $color;
-    border-color: $color;
+@mixin btn-outLing($btn-color) {
+  color: $btn-color;
+  border-color: $btn-color;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus,
+  &:active:hover {
+    color: darken($btn-color, 10%);
+    border-color: darken($btn-color, 25%);
     background-color: transparent;
-    border: 1px solid;
-    border-radius: 5px;
-    &:hover,
-    &:focus,
-    &:active,
-    &:active:focus,
-    &:active:hover {
-        color: darken($color, 10%);
-        border-color: darken($color, 25%);
-        background-color: transparent;
+  }
+}
+@mixin tour($color-bg, $color-ex-dark, $color-dark, $color) {
+  nav {
+    border-color: $color;
+    a.navbar-brand {
+      background-color: $color;
+      box-shadow: 0 0 10px $color;
+      &:hover {
+        background-color: $color-ex-dark;
+      }
+      &::before {
+        border-top: 4px solid $color;
+        border-right: 4px solid $color;
+      }
+      &::after {
+        border-bottom: 4px solid $color;
+        border-left: 4px solid $color;
+      }
     }
+    a.nav-link {
+      @include btn-outLing($color);
+    }
+  }
+  .header {
+    box-shadow: 0px 0 11px 1px $color-dark;
+    &:hover {
+      box-shadow: 0px 0 11px 1px $color-ex-dark;
+    }
+  }
+  .heading {
+    background-color: $color-bg;
+    box-shadow: 0px 0 11px 1px $color-dark;
+    &:hover {
+      box-shadow: 0px 0 11px 1px $color-ex-dark;
+    }
+  }
+  h2 {
+    color: $color-dark;
+  }
+  hr {
+  }
+  p {
+  }
+  #carouselTour {
+    box-shadow: 0 0 11px 1px $color-dark;
+    &:hover {
+        box-shadow: 0 0 11px 1px $color-ex-dark;
+    }
+    button {
+      color: $color-ex-dark;
+    }
+  }
+}
+
+.description {
+  .heading {
+    p {
+    }
+  }
 }

@@ -71,6 +71,8 @@ body {
     border-radius: 5px;
     margin-bottom: 80px;
     padding: 15px !important;
+    border-bottom: 1px solid $font;
+
     a.navbar-brand {
       max-width: 10%;
       background-color: $font;
@@ -204,6 +206,11 @@ body {
     max-width: 70%;
     margin-top: 200px;
     margin-bottom: 80px;
+    box-shadow: 0 0 11px 1px $font;
+    &:hover {
+      box-shadow: 0 0 11px 1px $font-dark;
+      transition: all 0.3s ease;
+    }
     @media (max-width: 575.98px) {
       max-width: 100%;
       padding: 50px 3px;
@@ -246,6 +253,10 @@ body {
       margin-bottom: 30px;
       box-shadow: 0 0 11px 1px $font;
       background-color: $bg-light;
+      &:hover {
+        box-shadow: 0 0 11px 1px $font-dark;
+        transition: all 0.3s ease;
+      }
       @media (max-width: 1199.98px) {
         height: 500px;
         @media (max-width: 991.98px) {
@@ -309,7 +320,8 @@ body {
             position: absolute;
             left: 11px;
             width: 110%;
-            transition: all .3s ease
+            box-shadow: 0 0 11px 1px $font-dark;
+            transition: all 0.3s ease;
           }
         }
         .card-body {
@@ -343,8 +355,19 @@ body {
     margin-top: 50px;
     background-color: rgb(56, 56, 56);
     border-radius: 10px;
+    box-shadow: 0 0 11px 1px $font;
+    &:hover {
+      box-shadow: 0 0 11px 1px $font-dark;
+      transition: all 0.3s ease;
+    }
     h4 {
       color: $font-dark;
+    }
+    .contact {
+      &:hover {
+        color: $font-dark;
+        transition: all 0.2s ease;
+      }
     }
     #map {
       iframe {
@@ -358,45 +381,20 @@ body {
   //////// turkey tour page //////////
   #turkey-tour {
     margin-top: 200px;
-    color: $font-turkey;
-
-    nav {
-      a.navbar-brand {
-        background-color: $font-turkey;
-        box-shadow: 0 0 10px $font-turkey;
-        &:hover {
-          background-color: $font-turkey-ex-dark;
-        }
-        &::before {
-          border-top: 4px solid $font-turkey-dark;
-          border-right: 4px solid $font-turkey-dark;
-        }
-        &::after {
-          border-bottom: 4px solid $font-turkey-dark;
-          border-left: 4px solid $font-turkey-dark;
-        }
-      }
-      a.nav-link {
-        @include btn-outLing($font-turkey);
-      }
-    }
-    .header {
-      box-shadow: 0px 0 11px 1px $font-turkey-dark;
-    }
+    @include tour($bg, $font-turkey-ex-dark, $font-turkey-dark, $font-turkey);
     .heading {
-      background-color: $bg-light;
       padding: 50px;
       border-radius: 10px;
       max-width: 100%;
       margin-bottom: 100px;
       height: auto;
+
       @media (max-width: 575.98px) {
         max-width: 100%;
         padding: 50px 3px;
       }
       h2 {
         text-align: center;
-        color: $font-turkey-dark;
         font-size: 25px;
       }
       hr {
@@ -443,32 +441,9 @@ body {
   //////// eygpt tour page //////////
   #eygpt-tour {
     margin-top: 200px;
-    nav {
-      a.navbar-brand {
-        background-color: $font-eygpt-dark;
-        box-shadow: 0 0 10px $font-eygpt-dark;
-
-        &:hover {
-          background-color: $font-eygpt-ex-dark;
-        }
-        &::before {
-          border-top: 4px solid $font-eygpt-ex-dark;
-          border-right: 4px solid $font-eygpt-ex-dark;
-        }
-        &::after {
-          border-bottom: 4px solid $font-eygpt-ex-dark;
-          border-left: 4px solid $font-eygpt-ex-dark;
-        }
-      }
-      a.nav-link {
-        @include btn-outLing($font-eygpt-dark);
-      }
-    }
+    @include tour($bg, $font-eygpt-ex-dark, $font-eygpt-dark, $font-eygpt);
     .header {
-      box-shadow: 0px 0 11px 1px $font-eygpt-dark;
-
       .heading {
-        background-color: $bg-light;
         padding: 50px;
         border-radius: 10px;
         max-width: 100%;
@@ -480,7 +455,6 @@ body {
         }
         h2 {
           text-align: center;
-          color: $font-dark;
           font-size: 25px;
         }
         hr {
@@ -505,9 +479,29 @@ body {
   }
   //// carousel for turkey & eygpt page
   #carouselTour {
+    max-width: 90%;
+    max-height: 90%;
+    padding: 40px 50px 10px;
     margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $bg;
+    border-radius: 10px;
+    @media (max-width: 991.98px) {
+      max-width: 100%;
+      @media (max-width: 575.98px) {
+        padding: 0;
+      }
+    }
+    @media (min-width: 767.98px) {
+      .carousel-inner {
+        img {
+        }
+      }
+    }
     .carousel-inner {
       img {
+        max-height: 490px;
         max-width: 100%;
         width: 1000px;
         height: auto;
@@ -517,6 +511,9 @@ body {
         margin-bottom: 50px;
       }
     }
+    button {
+      width: 7%;
+    }
   }
   /////////login page //////////////////
   #login {
@@ -525,6 +522,10 @@ body {
     background-color: $bg-light;
     padding: 50px;
     border-radius: 10px;
+    box-shadow: 0 0 11px 1px $font;
+    &:hover {
+      box-shadow: 0 0 11px 1px $font-dark;
+    }
     h1 {
       text-align: center;
       margin-bottom: 19px;
@@ -563,7 +564,10 @@ body {
     background-color: $bg-light;
     border-radius: 10px;
     padding: 30px;
-
+    box-shadow: 0 0 11px 1px $font;
+    &:hover {
+      box-shadow: 0 0 11px 1px $font-dark;
+    }
     h1 {
       text-align: center;
     }
