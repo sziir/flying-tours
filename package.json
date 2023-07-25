@@ -1,10 +1,10 @@
 {
-  "name": "shop",
+  "name": "travel company",
   "version": "1.0.0",
-  "description": "ecommerce templet using webpack and bootstrap",
+  "description": "travel company",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "travel \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "serve": "webpack serve --mode development"
@@ -12,7 +12,7 @@
   "keywords": [
     "webpack",
     "bootstrap",
-    "ecommerce"
+    "travel"
   ],
   "author": "mohammed",
   "license": "ISC",

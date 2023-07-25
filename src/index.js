@@ -5,6 +5,8 @@ import '@fortawesome/fontawesome-free/js/all.min';
 import './sass/style.scss';
 import 'particles.js';
 
+
+// bootstrap validation
 (() => {
     'use strict'
   
@@ -24,6 +26,7 @@ import 'particles.js';
     })
 })()
 
+// stars options
 particlesJS("bg", {
     "particles": {
       "number": {

@@ -1,6 +1,7 @@
 @import "./vars";
 @import "./mixins";
 
+// scrollbar
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -11,11 +12,14 @@
   background-color: $bg;
   border-radius: 60px !important;
 }
+// scrollbar end
 body {
   background: #090a0f;
   color: $font;
   overflow-x: hidden;
   max-height: 100% !important;
+
+  // stars class
   #bg {
     position: absolute;
     top: 0;
@@ -24,19 +28,20 @@ body {
     right: 0;
     z-index: -1;
   }
+  // stars responsive
   .main-bg {
     height: 3000px;
     @media (max-width: 1399.98px) {
       height: 2800px;
-    }
-    @media (max-width: 991.98px) {
-      height: 2400px;
-    }
-    @media (max-width: 767.98px) {
-      height: 4000px;
-    }
-    @media (max-width: 490.98px) {
-      height: 3500px;
+      @media (max-width: 991.98px) {
+        height: 2400px;
+        @media (max-width: 767.98px) {
+          height: 4000px;
+          @media (max-width: 490.98px) {
+            height: 3500px;
+          }
+        }
+      }
     }
   }
   .login-bg {
@@ -49,19 +54,18 @@ body {
     height: 2050px;
     @media (max-width: 767.98px) {
       height: 2300px;
-    }
-    @media (max-width: 575.98px) {
-      height: 2400px;
+      @media (max-width: 575.98px) {
+        height: 2400px;
+      }
     }
   }
-
   .eygpt-bg {
     height: 1350px;
     @media (max-width: 575.98px) {
       height: 1200px;
     }
   }
-
+  // stars responsive end
   nav {
     background-color: $bg-light;
     border-radius: 5px;
@@ -71,16 +75,97 @@ body {
       max-width: 10%;
       background-color: $font;
       border-radius: 5px;
+      position: relative;
+      box-shadow: 0 0 10px $font;
       &:hover {
         background-color: $font-ex-dark;
         transition: all 0.3s;
       }
-      @media (max-width: 991.98px) {
-        max-width: 18%;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-radius: 5px;
+        border-top: 4px solid $font-dark;
+        border-right: 4px solid $font-dark;
+        animation: border-top-right 3s infinite alternate;
       }
-      @media (max-width: 575.98px) {
-        max-width: 32%;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-radius: 5px;
+        border-bottom: 4px solid $font-dark;
+        border-left: 4px solid $font-dark;
+        animation: border-bottom-left 3s infinite alternate;
       }
+      @keyframes border-top-right {
+        0% {
+          width: 0;
+          height: 0;
+        }
+        25% {
+          width: 100%;
+          height: 0;
+        }
+        50% {
+          width: 100%;
+          height: 100%;
+        }
+        100% {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @keyframes border-bottom-left {
+        0% {
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+        50% {
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+        50.1% {
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+        75% {
+          width: 100%;
+          height: 0;
+          opacity: 1;
+        }
+        100% {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+        }
+      }
+      @media (max-width: 1199.98px) {
+        max-width: 14%;
+        @media (max-width: 991.98px) {
+          max-width: 18%;
+          @media (max-width: 767.98px) {
+            max-width: 24%;
+            @media (max-width: 575.98px) {
+              max-width: 32%;
+              @media (max-width: 372.98px) {
+                max-width: 40%;
+              }
+            }
+          }
+        }
+      }
+
       img {
         max-width: 30%;
       }
@@ -89,13 +174,14 @@ body {
       margin-right: 15%;
       @media (max-width: 1199.98px) {
         margin-right: 6%;
+        @media (max-width: 991.98px) {
+          margin-top: 20px;
+          margin-right: 0%;
+        }
       }
-      @media (max-width: 991.98px) {
-        margin-top: 20px;
-        margin-right: 0%;
-      }
+
       li.nav-item {
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 400;
         border-radius: 5px;
         &:not(:last-child) {
@@ -162,23 +248,22 @@ body {
       background-color: $bg-light;
       @media (max-width: 1199.98px) {
         height: 500px;
+        @media (max-width: 991.98px) {
+          height: 450px;
+          @media (max-width: 767.98px) {
+            height: 400px;
+          }
+        }
       }
-      @media (max-width: 991.98px) {
-        height: 450px;
-      }
-      @media (max-width: 767.98px) {
-        height: 400px;
-      }
+
       img {
         max-width: 100%;
         height: 400px;
         @media (max-width: 1199.98px) {
           height: 350px;
-        }
-        @media (max-width: 991.98px) {
-          height: 290px;
-        }
-        @media (max-width: 767.98px) {
+          @media (max-width: 991.98px) {
+            height: 290px;
+          }
         }
       }
       .card-body {
@@ -212,19 +297,19 @@ body {
       .custom-card:hover {
         @media (min-width: 767.98px) {
           right: 11px;
-          transition: all 1s ease;
         }
       }
       .card {
         background-color: $bg-light;
         box-shadow: 0 0 11px 1px $font;
         margin-bottom: 25px;
-
+        width: 100%;
         @media (min-width: 767.98px) {
           &:hover {
             position: absolute;
             left: 11px;
             width: 110%;
+            transition: all .3s ease
           }
         }
         .card-body {
@@ -278,8 +363,17 @@ body {
     nav {
       a.navbar-brand {
         background-color: $font-turkey;
+        box-shadow: 0 0 10px $font-turkey;
         &:hover {
           background-color: $font-turkey-ex-dark;
+        }
+        &::before {
+          border-top: 4px solid $font-turkey-dark;
+          border-right: 4px solid $font-turkey-dark;
+        }
+        &::after {
+          border-bottom: 4px solid $font-turkey-dark;
+          border-left: 4px solid $font-turkey-dark;
         }
       }
       a.nav-link {
@@ -317,9 +411,9 @@ body {
         @media (max-width: 575.98px) {
           font-size: 17px;
           width: 100%;
-        }
-        @media (max-width: 767.98px) {
-          font-size: 17px;
+          @media (max-width: 767.98px) {
+            font-size: 17px;
+          }
         }
       }
     }
@@ -332,15 +426,15 @@ body {
         p {
           @media (max-width: 1199.98px) {
             font-size: 16px;
-          }
-          @media (max-width: 991.98px) {
-            font-size: 14px;
-          }
-          @media (max-width: 767.98px) {
-            font-size: 17px;
-          }
-          @media (max-width: 575.98px) {
-            font-size: 17px;
+            @media (max-width: 991.98px) {
+              font-size: 14px;
+              @media (max-width: 767.98px) {
+                font-size: 17px;
+                @media (max-width: 575.98px) {
+                  font-size: 17px;
+                }
+              }
+            }
           }
         }
       }
@@ -352,8 +446,18 @@ body {
     nav {
       a.navbar-brand {
         background-color: $font-eygpt-dark;
+        box-shadow: 0 0 10px $font-eygpt-dark;
+
         &:hover {
           background-color: $font-eygpt-ex-dark;
+        }
+        &::before {
+          border-top: 4px solid $font-eygpt-ex-dark;
+          border-right: 4px solid $font-eygpt-ex-dark;
+        }
+        &::after {
+          border-bottom: 4px solid $font-eygpt-ex-dark;
+          border-left: 4px solid $font-eygpt-ex-dark;
         }
       }
       a.nav-link {
@@ -388,17 +492,18 @@ body {
           font-size: 17px;
           text-align: center;
 
-          @media (max-width: 575.98px) {
-            font-size: 17px;
-            width: 100%;
-          }
           @media (max-width: 767.98px) {
             font-size: 17px;
+            @media (max-width: 575.98px) {
+              font-size: 17px;
+              width: 100%;
+            }
           }
         }
       }
     }
   }
+  //// carousel for turkey & eygpt page
   #carouselTour {
     margin-top: 40px;
     .carousel-inner {
@@ -413,6 +518,7 @@ body {
       }
     }
   }
+  /////////login page //////////////////
   #login {
     margin-top: 200px;
     max-width: 500px;
@@ -451,6 +557,7 @@ body {
       }
     }
   }
+  ///////////// register page
   #register {
     margin-top: 200px;
     background-color: $bg-light;
