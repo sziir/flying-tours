@@ -309,7 +309,7 @@ body {
       position: relative;
       .custom-card:hover {
         @media (min-width: 767.98px) {
-          right: 11px;
+          right: -10px;
         }
       }
       .card {
