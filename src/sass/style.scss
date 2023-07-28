@@ -316,12 +316,13 @@ body {
         background-color: $bg-light;
         box-shadow: 0 0 11px 1px $font;
         margin-bottom: 25px;
-        width: 100%;
+        width: 95%;
+        
         @media (min-width: 767.98px) {
           &:hover {
             position: absolute;
             left: 11px;
-            width: 110%;
+            width: 100%;
             box-shadow: 0 0 11px 1px $font-dark;
             transition: all 0.3s ease;
           }
